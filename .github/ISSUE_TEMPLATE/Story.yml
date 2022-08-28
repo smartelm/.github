@@ -1,0 +1,50 @@
+name: Story
+description: File a story report
+title: "[Story]: "
+labels: ["story", "triage"]
+assignees:
+  - aelsayed85
+  - aflaifel-elm
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this story report!
+  - type: input
+    id: epic
+    attributes:
+      label: Epic name
+      description: Descripe the name of the Epic related to the story ?
+      placeholder: ex. User Management
+    validations:
+      required: false
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      multiple: false
+      options:
+        - Blocker
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What are the story details?
+      description: Also tell us, detailed story requirements.
+      placeholder: Tell us what you understand!
+      value: "As a system should do ....!"
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: What do you think is acceptance criteria ?
+      description: Also tell us, what did you expect to accept that story ?
+      placeholder: Tell us correct acceptance criteria!
+      value: "A success message!"
+    validations:
+      required: true

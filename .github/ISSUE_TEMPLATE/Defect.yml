@@ -1,0 +1,81 @@
+name: Bug
+description: File a bug report
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees:
+  - aelsayed85
+  - aflaifel-elm
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: module
+    attributes:
+      label: Module Name
+      description: Descripe the name of the module related to the issue?
+      placeholder: ex. User Management
+    validations:
+      required: false
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      multiple: false
+      options:
+        - Blocker
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+  - type: dropdown
+    id: bug-type
+    attributes:
+      label: Bug Type
+      multiple: false
+      options:
+        - Function error
+        - Performance error
+        - System Requirement
+        - UI
+        - Enhancement
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, detailed reproduce steps.
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: textarea
+    id: expected-result
+    attributes:
+      label: What do you expect?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us correct behavior!
+      value: "A success message!"
+    validations:
+      required: true
+  #   - type: dropdown
+  #     id: version
+  #     attributes:
+  #       label: Version
+  #       description: What version of our software are you running?
+  #       options:
+  #         - 1.0.0 (Default)
+  #         - 1.0.1 (Edge)
+  #     validations:
+  #       required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+    validations:
+      required: false
