@@ -3,8 +3,7 @@ description: File a bug report
 title: "[Bug]: "
 labels: ["bug", "triage"]
 assignees:
-  - aelsayed85
-  - aflaifel-elm
+  - amrbadawy
 body:
   - type: markdown
     attributes:
