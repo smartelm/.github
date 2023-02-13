@@ -3,8 +3,7 @@ description: File a story report
 title: "[Story]: "
 labels: ["story", "triage"]
 assignees:
-  - aelsayed85
-  - aflaifel-elm
+  - amrbadawy
 body:
   - type: markdown
     attributes:
